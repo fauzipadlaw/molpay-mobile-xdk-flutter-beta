@@ -1,0 +1,17 @@
+name: molpay_mobile_xdk_flutter_beta
+description: MOLPay mobile payment for Flutter (BETA)
+version: 0.29.1
+homepage: https://github.com/MOLPay/molpay-mobile-xdk-flutter-beta
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.molpay.molpaymobilexdkflutterbeta
+    pluginClass: MolpayMobileXdkFlutterBetaPlugin
+
+environment:
+  sdk: ">=2.0.0-dev.43.0 <3.0.0"
+  flutter: ">=0.2.8 <2.0.0"

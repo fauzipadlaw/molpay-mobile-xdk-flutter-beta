@@ -1,0 +1,35 @@
+ANDROID:
+
+1. change Version in lib/pubspec.yaml
+2. change Version of molpay-mobile-xdk-android in android/build.gradle (use Android Native Wrapper)
+   dependencies {
+    api 'com.android.support:appcompat-v7:27.0.0' 
+    api 'com.android.support:design:27.0.0'
+    api 'com.molpay:molpay-mobile-xdk-android:3.22.0' <---- to the latest one
+   }
+
+IOS:
+1. change MOLPayXDK.bundle & MOLPayXDK.framework in iOS/ (use IOS Native Wrapper)
+2. run flutter run to see the xdk version on app
+
+
+PUBLISH STEPS:
+============================
+TEST FIRST BEFORE PUBLISH (https://pub.dev/)
+1. run >> flutter run
+OR
+AFTER UPLOAD ON GITHUB OR LOCAL PACKAGE
+dependencies:
+   flutter:
+     sdk: flutter
+   molpay_mobile_xdk_flutter_beta:
+     path: ./molpay_mobile_xdk_flutter_beta
+============================
+
+1. run : flutter packages pub publish --dry-run <---to see if everything passes analysis
+2. run : flutter packages pub publish <---- to publish	
+
+========================================================================================================================================
+
+For AndroidX Migration for existing project can follow this link:
+https://flutter.dev/docs/development/androidx-migration
